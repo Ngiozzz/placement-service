@@ -6,33 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Host Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\navstyle.css">
+    
 </head>
 <body>
-<div class='landing-nav'>
-        <ul class='nav nav-pills'></ul>
-            <li class="nav-item">
-                <a href="landingpage.php">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="hostlogin.php">Host Login</a>
-            </li>
-            <li class="nav-item">
-                <a href="hostsignup.php">Host Signup</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Staff Portal</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="adminlogin.php">Admin Portal</a></li>
-                    <li><a class="dropdown-item" href="vetterlogin.php">Vetter Portal</a></li>
-                    <li><a class="dropdown-item" href="counsellorlogin.php">Counsellor Portal</a></li>
-                     
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a href="aboutus.php">About us</a>
-            </li>
-            <li class="nav-item">
-                <a href="contactus.php">Contact us</a>
-            </li>
+<div class='navigation'>
+    <div class="logo">
+        <p>Placement Service</p>
     </div>
+    <div class="menu">
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>
+        <div class="menu-bar"></div>    
+        
+        <div class="menu-content">
+            <?php
+            if(ISSET($_SESSION['User'])){
+                echo "<a href='index.php'>Home</a>";
+                echo "<a href='profile.php'>My profile</a>";
+                echo "<a href='logout.php'>Log Out</a>";
+                }
+                else{
+                echo "<a href='landingpage.php'>Home</a>";
+                echo "<a href='hostlogin.php'>Host Login</a>";
+                echo "<a href='hostsignup.php'>Host Signup</a>";
+                echo "<a href='adminlogin.php'>Admin Portal</a>";
+                echo "<a href='vetterlogin.php'>Vetter Portal</a>";
+                echo "<a href='counsellorlogin.php'>Counselor Portal</a>";
+                
+            }
+            
+            echo "<a href='aboutus.php'>About us</a>";
+            echo "<a href='contactus.php'>Contact us</a>";
+            ?>
+        </div>
+    </div>
+</div>
+ 
     <hr>
