@@ -11,6 +11,11 @@ include_once 'header.php'
                 <input class="input-field last-name" type="text" name="lastname">
                 <label class="input-label last-name-label">last Name</label>
             </div>
+            <div class="form-category category-id">
+                <p class="input-category">User ID</p>
+                <input class="input-field first-name-input" type="text" name="userID">
+                <label class="input-label first-name-label">User ID</label>
+            </div>
             <div class="form-category category-personal">
                 <p class="input-category">Personal Information</p>
                 <input class="input-field " type="text" name="idnumber">
