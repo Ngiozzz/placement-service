@@ -78,3 +78,21 @@ function createUser($conn,$name, $identification, $dob, $residence, $email, $pho
     header("location: ../signup.php?error=none");
     exit();
 }
+function emptyInputApplication($firstname, $lastname, $idnumber, $nationality, $dob, $gender,$email,$areacode,$phonenumber,
+$firstnamekin, $lastnamekin, $areacodekin, $phonenumberkin, $occupation, $employer, $emailemployer, $areacodeemployer, 
+$phonenumberemployer ,$userID){
+    if (empty($firstname)|| empty($lastname)|| empty($idnumber)|| empty($nationality)|| empty($dob)|| empty($gender)|| empty($email)|| empty($areacode) 
+    ||empty($phonenumber) ||empty($firstnamekin) ||empty($lastnamekin) ||empty($areacodekin) ||empty($phonenumberkin)||empty($occupation) ||empty($employer) ||empty($emailemployer) 
+    ||empty($areacodeemployer) ||empty($phonenumberemployer) ||empty($userID)){
+        $result= true;
+    }  
+    else{
+        $result=false;
+    }       
+    return $result;
+}
+function createApplication($firstname, $lastname, $idnumber, $nationality, $dob, $gender,$email,$areacode,$phonenumber,
+        $firstnamekin, $lastnamekin, $areacodekin, $phonenumberkin, $occupation, $employer, $emailemployer, $areacodeemployer, 
+        $phonenumberemployer ,$userID){
+
+}
